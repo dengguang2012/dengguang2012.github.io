@@ -1,3 +1,13 @@
+---
+layout: post
+title: leetcode 98.Validate Binary Search Tree
+categories:
+- leetcode
+tags:
+- leetcode
+- 
+---
+
 # leetcode 98.Validate Binary Search Tree
 
 二叉搜索树。 如果该树的左子树不为空， 则左子树的虽有节点的值均小于它的根结点的值；若它的右子树不为空，则它的右子树上所有节点的值均大雨它的根结点的值；它的左右子树也为二叉搜索树。
@@ -6,7 +16,8 @@
 
 使用两种方法求解
 1. 使用递归方法， 把子树的大小范围作为参数传递
-```
+
+```py
 class Solution:
     def isValidBST(self, root):
         def helper(node, lower = float('-inf'), upper = float('inf')):
@@ -25,7 +36,7 @@ class Solution:
 
 2. 使用基于栈的中序遍历方法
 
-```
+```py
 class Solution2:
     def isValidBST(self, root):
         stack, inorder = [], float('-inf')
